@@ -10,7 +10,10 @@
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         // Для абсолютного импорта
-        "baseUrl": "."
+        "baseUrl": ".",
+        "paths": {
+            "*": ["./src/*"] // пути импортируются относительно /src/ - абсолютные пути, вместо относительных
+        }
     },
     "ts-node": {
         "compilerOptions": {
