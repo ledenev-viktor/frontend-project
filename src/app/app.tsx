@@ -8,14 +8,18 @@ import { useTheme } from "./providers/themeProviders";
 import "./styles/index.scss";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/navbar";
+import { Sidebar } from "widgets/sidebar";
 
 const App = () => {
   const { theme } = useTheme();
 
   return (
     <div className={classnames("app", {}, [theme])}>
-      <Navbar/>
-      <AppRouter />
+      <Navbar />
+      <div className="content-page">
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   );
 };
