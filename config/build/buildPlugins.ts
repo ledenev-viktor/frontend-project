@@ -1,10 +1,10 @@
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { BuildPaths } from "./types/config";
+import { BuildOptions } from "./types/config";
 
 export const buildPlugins = (
-  paths: BuildPaths
+  {paths, isDev}: BuildOptions
 ): webpack.WebpackPluginInstance[] => {
   return [
     new HtmlWebpackPlugin({
@@ -15,5 +15,8 @@ export const buildPlugins = (
       chunkFilename: 'css/[name].[contenthash:8].css',
     }),
     new webpack.ProgressPlugin(),
+    new webpack.DefinePlugin({ // этот плагин для использования в коде глобальных переменных
+      __IS_DEV__: JSON.stringify(isDev),
+    })
   ];
 };
