@@ -19,6 +19,17 @@ export const buildLoaders = ({
     use: ["@svgr/webpack"],
   };
 
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ["@babel/preset-env"],
+      },
+    },
+  };
+
   // Если не использую тайпскрип, нужен babel-loader
   const typescriptLoader = {
     test: /\.tsx?$/,
@@ -43,5 +54,5 @@ export const buildLoaders = ({
     ],
   };
 
-  return [svgLoader, fileLoader, typescriptLoader, styleLoader,];
+  return [svgLoader, fileLoader, babelLoader, typescriptLoader, styleLoader];
 };
