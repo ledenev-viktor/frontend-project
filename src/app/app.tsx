@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { classnames } from "shared/libs/classNames/classNames";
 import { useTheme } from "./providers/themeProviders";
 import "./styles/index.scss";
@@ -11,7 +11,8 @@ const App = () => {
 
   return (
     <div className={classnames("app", {}, [theme])}>
-      <Suspense fallback=""> {/** для переводов useTranslate */}
+      <Suspense fallback="">
+        {/** для переводов useTranslate */}
         <Navbar />
         <div className="content-page">
           <Sidebar />
