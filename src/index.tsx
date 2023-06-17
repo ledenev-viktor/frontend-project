@@ -7,10 +7,10 @@ import "./shared/config/i18n/i18n";
 const root = document.querySelector("#root");
 
 render(
-    <BrowserRouter>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>,
+  <BrowserRouter>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </BrowserRouter>,
   root
 );

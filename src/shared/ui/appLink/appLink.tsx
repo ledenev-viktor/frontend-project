@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { classnames } from "shared/libs/classNames/classNames";
 import cls from "./style.module.scss";
 import { Link, LinkProps } from "react-router-dom";

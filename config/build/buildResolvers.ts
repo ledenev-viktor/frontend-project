@@ -6,7 +6,7 @@ export const buildResolvers = (options: BuildOptions): webpack.ResolveOptions =>
     extensions: [".tsx", ".ts", ".js"],
     preferAbsolute: true, // абсолютные пути в приоритете
     modules: [options.paths.src, "node_modules"],
-    mainFiles: ['index'],
+    mainFiles: ["index"],
     alias: {},
   };
 };

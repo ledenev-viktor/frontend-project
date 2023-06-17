@@ -12,8 +12,8 @@ export const buildPlugins = (
       template: paths.html,
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].css',
+      filename: "css/[name].[contenthash:8].css",
+      chunkFilename: "css/[name].[contenthash:8].css",
     }),
     new webpack.ProgressPlugin(),
     new webpack.DefinePlugin({ // этот плагин для использования в коде глобальных переменных

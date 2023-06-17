@@ -22,7 +22,7 @@ export const Button: FC<ButtonProps> = ({
     <button
       className={classnames(cls.Button, {}, [className, cls[theme]])}
       {...otherProps}
-        onClick={onClick}
+      onClick={onClick}
     >
       {children}
     </button>
