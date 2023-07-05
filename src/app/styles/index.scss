@@ -2,19 +2,3 @@
 @import "./variables/global";
 @import "./themes/normal";
 @import "./themes/dark";
-
-.app {
-  font: var(--font-m);
-  background: var(--bg-color);
-  color: var(--primary-color);
-  min-height: 100vh;
-}
-
-.content-page {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.page-wrapper {
-  flex-grow: 1;
-}
