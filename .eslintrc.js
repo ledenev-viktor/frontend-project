@@ -49,7 +49,7 @@ module.exports = {
     ],
     indent: [2, 2],
     "react/react-in-jsx-scope": "off",
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
     semi: ["error", "always"],
     "import/no-unresolved": "off",
