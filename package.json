@@ -14,6 +14,9 @@
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
+    "test:ui:json": "node scripts/generate-visual-json-report.js",
+    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "sb": "storybook dev -p 6006 -c ./config/storybook",
     "build:sb": "storybook build -c ./config/storybook"
   },
@@ -58,6 +61,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "mini-css-extract-plugin": "^2.7.6",
+    "reg-cli": "^0.17.7",
     "sass": "^1.63.3",
     "sass-loader": "^13.3.2",
     "storybook": "^7.0.22",
