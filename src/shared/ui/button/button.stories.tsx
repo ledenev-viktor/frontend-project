@@ -2,13 +2,19 @@
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button, ThemeButton } from "./button";
+import { Button, ButtonSize, ThemeButton } from "./button";
 
 const meta = {
   title: "Shared/Button",
   component: Button,
   args: {
     children: "this text",
+  },
+  argTypes: {
+    size: {
+      options: [ButtonSize.M, ButtonSize.L, ButtonSize.XL],
+      control: { type: "select" }, // Automatically inferred when 'options' is defined
+    },
   },
 } satisfies Meta<typeof Button>;
 
@@ -32,4 +38,41 @@ export const Outline: Story = {
 Outline.args = {
   children: "Text++",
   theme: ThemeButton.OUTLINE,
+};
+
+export const Background: Story = {
+  render: (args) => <Button {...args} />,
+};
+Background.args = {
+  children: "text",
+  theme: ThemeButton.BACKGROUND,
+};
+
+export const BackgroundInverted: Story = {
+  render: (args) => <Button {...args} />,
+};
+BackgroundInverted.args = {
+  children: "text",
+  theme: ThemeButton.BACKGROUND_INVERTED,
+};
+
+// export const Square: Story = {
+//   render: (args) => <Button {...args} />,
+// };
+// Square.args = {
+//   children: "<",
+//   theme: ThemeButton.BACKGROUND,
+//   square: true,
+//   // size: select('size', SIZES, 'm'),
+// };
+
+export const Square: Story = {
+  render: (args) => {
+    return <Button {...args} />;
+  },
+  args: {
+    children: "<",
+    size: ButtonSize.M,
+    square: true,
+  },
 };
