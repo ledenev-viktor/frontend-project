@@ -1,10 +1,10 @@
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { classnames } from "shared/libs/classNames/classNames";
 import { useTheme } from "./providers/themeProviders";
-import "./styles/index.scss";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/navbar";
 import { Sidebar } from "widgets/sidebar";
+import { Modal } from "shared/ui/modal/modal";
 
 const App = () => {
   const { theme } = useTheme();

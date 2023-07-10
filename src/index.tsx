@@ -5,6 +5,7 @@ import { ThemeProvider } from "app/providers/themeProviders";
 import "./shared/config/i18n/i18n";
 import { ErrorBoundary } from "app/providers/erorBoundary";
 import { PageError } from "widgets/pageError";
+import "./app/styles/index.scss";
 
 const root = document.querySelector("#root");
 

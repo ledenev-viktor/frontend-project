@@ -9,6 +9,13 @@
   --font-size-xl: 32px;
   --font-line-xl: 40px;
   --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family);
+
+  // z - Индексы
+  --modal-z-index: 10;
+
+  // bg
+  --bg-overlay: rgba(0 0 0 / 60%);
+  --bg-modal: #fff;
 }
 
 .app {

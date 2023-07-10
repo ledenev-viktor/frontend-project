@@ -30,8 +30,21 @@ export const Primary: Story = {
   render: () => <Button>Text</Button>,
 };
 export const Clear: Story = {
-  render: () => <Button children={"Text"} theme={ThemeButton.CLEAR} />,
+  render: (args) => <Button {...args} />,
 };
+Clear.args = {
+  children: "Text",
+  theme: ThemeButton.CLEAR,
+};
+
+export const ClearInverted: Story = {
+  render: (args) => <Button {...args} />,
+};
+ClearInverted.args = {
+  children: "Text",
+  theme: ThemeButton.CLEAR_INVERTED,
+};
+
 export const Outline: Story = {
   render: (args) => <Button {...args} />,
 };

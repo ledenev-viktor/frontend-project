@@ -5,12 +5,17 @@
   max-width: 300px;
 }
 
-.clear {
+.clear,
+.clearInverted {
   background: transparent;
   border: none;
   padding: 0;
   margin: 0;
   outline: none;
+}
+
+.clearInverted {
+  color: var(--inverted-primary-color);
 }
 
 .outline {
