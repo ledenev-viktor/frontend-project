@@ -17,7 +17,6 @@ export const Modal: FC<ModalProps> = ({
   isOpend,
   onClose,
 }) => {
-  const { theme } = useTheme();
   const closeHandler = useCallback((): void => {
     if (onClose) {
       onClose();
@@ -51,7 +50,7 @@ export const Modal: FC<ModalProps> = ({
   };
   return (
     <Portal>
-      <div className={classnames(cls.Modal, mods, [className, theme])}>
+      <div className={classnames(cls.Modal, mods, [className])}>
         <div onClick={closeHandler} className={cls.overlay}>
           <div onClick={onContentClick} className={cls.content}>
             {children}
