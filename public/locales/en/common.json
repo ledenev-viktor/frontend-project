@@ -4,5 +4,8 @@
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error has occurred",
   "Обновить страницу": "Refresh page",
-  "Войти": "Sigh In"
+  "Войти": "Sigh In",
+  "Значение": "Value",
+  "Увеличить": "increment",
+  "Уменьшить": "decrement"
 }
