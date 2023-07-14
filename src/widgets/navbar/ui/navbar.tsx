@@ -5,6 +5,7 @@ import cls from "./navbar.module.scss";
 import { useTranslation } from "react-i18next";
 import { Modal } from "shared/ui/modal/modal";
 import { Button, ThemeButton } from "shared/ui/button/button";
+import { LoginModal } from "features/authByUsername";
 
 interface NavbarProps {
   className?: string;
@@ -23,10 +24,7 @@ export const Navbar: FC<NavbarProps> = () => {
       <Button theme={ThemeButton.CLEAR_INVERTED} onClick={onToggleModalAuth}>
         {t("Войти")}
       </Button>
-      <Modal isOpend={isOpendAuth} onClose={onToggleModalAuth}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi,
-        impedit.
-      </Modal>
+      <LoginModal isOpend={isOpendAuth} onClose={onToggleModalAuth} />
     </div>
   );
 };

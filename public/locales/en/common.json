@@ -7,5 +7,8 @@
   "Войти": "Sigh In",
   "Значение": "Value",
   "Увеличить": "increment",
-  "Уменьшить": "decrement"
+  "Уменьшить": "decrement",
+  "Авторизация": "Authorization",
+  "Введите имя": "Enter name",
+  "Введите пароль": "Enter password"
 }
