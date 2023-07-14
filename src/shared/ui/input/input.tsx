@@ -30,8 +30,6 @@ export const Input: FC<InputProps> = memo(
     autoFocus,
     ...otherProps
   }: InputProps) => {
-    const { t } = useTranslation("common");
-
     const inputRef = useRef<HTMLInputElement>();
 
     useEffect(() => {
